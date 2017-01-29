@@ -15,6 +15,7 @@ def get_movies(movie_file):
 
 	for entry in movie_inputs:
 		entry_columns = entry.split("|")
+
 		title = entry_columns[0]
 		story = entry_columns[1]
 		image = entry_columns[2]
@@ -26,4 +27,5 @@ def get_movies(movie_file):
 	movies_file.close()
 	return movies
 
+# >> Main
 fresh_tomatoes.open_movies_page(get_movies("movies.txt"))
